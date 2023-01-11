@@ -31,16 +31,23 @@
     <action-form
     style="margin-bottom: 100px"
     />
-    <my-coment/>
-    
+    <div class="reviews">
+        <my-reviews/>
+        <my-reviews/>
+        <my-reviews/>  
+    </div>
+    <div class="add-rev">
+        <add-reviews/>
+    </div>
 </template>
 
 <script>
 import ActionForm from '@/components/ActionForm.vue'
 import article from "../../public/article.json"
-import MyComent from '@/components/MyComent.vue'
+import MyReviews from '@/components/MyReviews.vue'
+import AddReviews from '@/components/AddReviews.vue'
 export default {
-  components: { ActionForm, MyComent },
+  components: { ActionForm, MyReviews, AddReviews },
     data(){
         return{
             detailedPage: article.filter(t => t.id == this.$route.params.id )[0]
@@ -53,4 +60,14 @@ export default {
 .servise__items{
     margin-bottom: 100px;
 }    
+.reviews{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+.add-rev{
+    max-width: 600px;
+    margin: 50px auto;
+}
 </style>
