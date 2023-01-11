@@ -3,7 +3,7 @@
         <h1 class="servise_title">Виды уборки</h1>
         <p class="servise_text">Закажите уборку, остальное - наша забота.</p>
         <div class="news__items" > 
-            <div class="news__item" v-for="n in news" :key="n.id" @click="$router.push(`/services/${n.id}`)">
+            <div class="news__item" v-for="n in allArticles" :key="n.id" @click="$router.push(`/services/${n.id}`)">
                 <v-card
                 class="mx-auto"
                 color="grey-lighten-4"
@@ -36,17 +36,18 @@
 </template>
 
 <script>
-import article from "../../public/article.json"
+import { mapGetters, mapActions } from "vuex";
 import ActionButton from "@/components/UI/ActionButton.vue";
 export default {
     components: {
-        ActionButton
-    },
-    data(){
-        return{
-            news: article
-        }
+            ActionButton,
+        },
+    computed: mapGetters(["allArticles"]),
+    methods: mapActions(['fetchPosts']),
+    async mounted() {
+        this.fetchPosts()
     }
+    
 }
 </script>
 
