@@ -37,6 +37,7 @@
         <my-reviews/>  
     </div>
     <div class="add-rev">
+        <h3>Оставить отзыв</h3>
         <add-reviews/>
     </div>
 </template>
@@ -69,5 +70,15 @@ export default {
 .add-rev{
     max-width: 600px;
     margin: 50px auto;
+}
+
+
+@media print{
+    .add-rev{
+        display: none;
+    }
+    .reviews{
+        page-break-before: always;
+    }
 }
 </style>

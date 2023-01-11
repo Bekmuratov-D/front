@@ -51,4 +51,9 @@ export default {
     max-width: 400px;
     margin-bottom: 40px;
 }
+@media print{
+.wrapper{
+    display: none;
+}
+}
 </style>

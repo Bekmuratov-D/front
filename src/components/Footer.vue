@@ -18,4 +18,9 @@ export default {
 .footer{
     height: 50px;
 }
+@media print{
+.footer{
+    display: none;
+}
+}
 </style>

@@ -19,3 +19,14 @@ export default {
   }
 }
 </script>
+
+<style>
+@media print{
+  Header{
+    display: none;
+  }
+  Footer{
+    display: none;
+  }
+}
+</style>

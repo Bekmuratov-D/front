@@ -1,6 +1,7 @@
 <template>
     <v-container
         max-width="1400"
+        class="wrapper"
     >
         <v-app-bar>
             <v-app-bar-title>
@@ -52,5 +53,10 @@ export default {
 .login__btn{
     background-color: rgb(79, 151, 81);
     color: white;
+}
+@media print{
+.wrapper{
+    display: none;
+}
 }
 </style>
