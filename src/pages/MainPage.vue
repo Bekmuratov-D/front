@@ -1,29 +1,31 @@
 <template>
-    <h1>Главная</h1>
-    <v-container>
-        <v-carousel
-            cycle
-            height="400"
-            hide-delimiter-background
-            show-arrows="hover"
-            >
-            <v-carousel-item
-                v-for="(slide, i) in slides"
-                :key="i"
-            >
-                <v-sheet
-                :color="colors[i]"
-                height="100%"
+    <div class="wrapper">
+        <h1 class="title">КЛИНИНГОВЫЕ УСЛУГИ</h1>
+        <v-container>
+            <v-carousel
+                cycle
+                height="400"
+                hide-delimiter-background
+                show-arrows="hover"
                 >
-                <div class="d-flex fill-height justify-center align-center">
-                    <div class="text-h2">
-                    {{ slide }} Slide
+                <v-carousel-item
+                    v-for="(slide, i) in slides"
+                    :key="i"
+                >
+                    <v-sheet
+                    :color="colors[i]"
+                    height="100%"
+                    >
+                    <div class="d-flex fill-height justify-center align-center">
+                        <div class="text-h2">
+                        {{ slide }} Slide
+                        </div>
                     </div>
-                </div>
-                </v-sheet>
-            </v-carousel-item>
-        </v-carousel>
-    </v-container>
+                    </v-sheet>
+                </v-carousel-item>
+            </v-carousel>
+        </v-container>
+    </div>
 </template>
 
 <script>
@@ -50,5 +52,12 @@ export default {
 </script>
 
 <style scoped>
-
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.title{
+    max-width: 400px;
+    margin: 0 auto;
+}
 </style>

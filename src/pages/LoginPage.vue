@@ -33,7 +33,7 @@
                                 color="success"
                                 class="mr-4"
                             >
-                                Войти
+                            <router-link to="/user">Войти</router-link>
                             </v-btn>
                         </v-form>
                     </v-window-item>
@@ -68,7 +68,7 @@
                                 color="success"
                                 class="mr-4"
                             >
-                                Войти
+                            <router-link to="/user">Войти</router-link>
                             </v-btn>
                         </v-form>
                     </v-window-item>

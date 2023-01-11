@@ -1,0 +1,56 @@
+<template>
+    <div class="servise__items" > 
+        <v-card
+        class="mx-auto"
+        color="grey-lighten-4"
+        max-width="1000"
+        
+        >
+            <v-img
+            :aspect-ratio="16/9"
+            cover
+            :src="require(`@/img/${detailedPage.full_image}`)"
+            >
+            </v-img>
+            <v-card-text
+            class="pt-6"
+            style="position: relative;"
+            >
+            <div class="font-weight-light text-grey text-h6 mb-2">
+                {{detailedPage.date}}
+            </div>
+            <h3 class="text-h4 font-weight-light text-orange mb-2">
+                {{detailedPage.name}}
+            </h3>
+            <div class="font-weight-light text-h6 mb-2">
+                {{detailedPage.desc}}
+            </div>
+            </v-card-text>
+        </v-card>
+    </div>
+    <action-form
+    style="margin-bottom: 100px"
+    />
+    <my-coment/>
+    
+</template>
+
+<script>
+import ActionForm from '@/components/ActionForm.vue'
+import article from "../../public/article.json"
+import MyComent from '@/components/MyComent.vue'
+export default {
+  components: { ActionForm, MyComent },
+    data(){
+        return{
+            detailedPage: article.filter(t => t.id == this.$route.params.id )[0]
+        }
+    }
+}
+</script>
+
+<style scoped>
+.servise__items{
+    margin-bottom: 100px;
+}    
+</style>

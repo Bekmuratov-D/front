@@ -3,7 +3,11 @@
         max-width="1400"
     >
         <v-app-bar>
-            <v-app-bar-title><router-link to="/">Vue3</router-link></v-app-bar-title>
+            <v-app-bar-title>
+                <router-link to="/">
+                <img src="	https://cleantime365.ru/wp-content/themes/cleantime_wewowo/img/svg/Cleaning_logo_cyr.svg" alt="logo" style="width:100px; height: 100px;">
+                </router-link>
+            </v-app-bar-title>
             <v-spacer/>
 
             <v-responsive

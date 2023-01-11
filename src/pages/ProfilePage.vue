@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
       <my-dialog v-model:show="dialogVisible"></my-dialog>
       <h2>Ваш профиль</h2>
       <v-card class="profile__card">
@@ -71,6 +71,10 @@ export default {
 </script>
 
 <style scoped>
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .profile__card{
 align-items: center;
 padding: 20px;
